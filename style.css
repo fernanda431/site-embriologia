@@ -1,39 +1,16 @@
+/* Reset e base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #0077cc;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  margin-top: 10px;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  /* Reset */
 body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #fafafa;
-  text-align: center;
   color: #333;
+  text-align: center;
+  height: 100%;
 }
 
 /* Loader */
@@ -44,6 +21,7 @@ body, html {
   justify-content: center;
   height: 100vh;
 }
+
 .spinner {
   border: 6px solid #ddd;
   border-top: 6px solid #2196f3;
@@ -52,21 +30,22 @@ body, html {
   height: 50px;
   animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
+
 .hidden {
   display: none;
 }
 
 /* Navbar */
-header {
+header.navbar {
   background-color: white;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,11 +63,16 @@ header {
   cursor: pointer;
 }
 
+/* Menu */
 nav {
   background-color: #f0f0f0;
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.4s ease-in-out;
+}
+
+nav.expanded {
+  max-height: 200px;
 }
 
 nav ul {
@@ -107,89 +91,7 @@ nav ul li a {
   font-weight: bold;
 }
 
-nav.expanded {
-  max-height: 200px;
-}
-
-/* Conteúdo principal */
-main {
-  padding: 20px;
-}
-
-h2 {
-  font-family: 'Times New Roman', serif;
-  font-size: 32px;
-  margin-top: 30px;
-}
-
-.pink {
-  color: #e91e63;
-}
-
-.blue {
-  color: #2196f3;
-}
-
-.subtext {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #666;
-}
-
-.buttons {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  max-width: 320px;
-  padding: 18px;
-  font-size: 18px;
-  border: none;
-  border-radius: 50px;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.btn:active {
-  transform: scale(0.97);
-}
-
-.btn i {
-  margin-right: 10px;
-}
-
-.blue-btn {
-  background-color: #2196f3;
-}
-
-.pink-btn {
-  background-color: #e91e63;
-}
-
-.curiosidade {
-  margin-top: 40px;
-  font-style: italic;
-  font-size: 16px;
-  color: #444;
-  padding: 0 20px;
-}
-
-.credits {
-  margin-top: 40px;
-  font-family: 'Times New Roman', serif;
-  color: #2196f3;
-  font-size: 16px;
-}
+/* Curiosidade */
 .curiosity-section {
   background: #f9f9f9;
   padding: 30px 20px;
@@ -201,60 +103,87 @@ h2 {
 }
 
 .curiosity-section h2 {
-  color: #d6336c; /* rosa */
+  color: #d6336c;
   font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-.curiosity-section .intro {
-  text-align: center;
+.curiosity-section p {
   font-style: italic;
-  margin-bottom: 20px;
-  color: #4a4a4a;
   font-size: 1.1rem;
+  color: #4a4a4a;
 }
 
-.sketchfab-embed-wrapper {
-  max-width: 100%;
-  margin: 0 auto 25px;
-  text-align: center;
+/* Quiz */
+#quiz-box, #quiz-end {
+  margin: 30px auto;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
 }
 
-.sketchfab-embed-wrapper iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+#question-text {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.audio-heart {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.audio-heart p {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #1caad9; /* azul */
-}
-
-.curiosities-list h3 {
-  color: #1caad9; /* azul */
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   margin-bottom: 15px;
-  text-align: center;
 }
 
-.curiosities-list ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  max-width: 700px;
-  margin: 0 auto;
+.btn {
+  padding: 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.quiz-option {
+  background-color: #2196f3;
+}
+
+.btn.correct {
+  background-color: #4caf50 !important;
+}
+
+.btn.incorrect {
+  background-color: #f44336 !important;
+}
+
+.btn:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+#feedback {
+  font-weight: bold;
+  min-height: 40px;
+}
+
+#next-btn {
+  background-color: #e91e63;
+  padding: 12px 30px;
   font-size: 1rem;
-  line-height: 1.5;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.curiosities-list ul li {
-  margin-bottom: 10px;
+#next-btn:active {
+  transform: scale(0.97);
 }
+
+
+
+
