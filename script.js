@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
   curiosidade.textContent = `"${fraseAleatoria}"`;
 });
+
+// Quiz data
 const quizData = [
   {
     pergunta: "Em qual semana o coração começa a bater no embrião?",
@@ -159,7 +161,6 @@ function finalizarQuiz() {
   quizBox.style.display = "none";
   quizEnd.classList.remove("hidden");
 
-  const progresso = (acertos / quizData.length) * 100;
   progressBar.style.width = "100%";
 
   if (acertos >= 9) {
@@ -182,7 +183,8 @@ function restartQuiz() {
   carregarPergunta();
 }
 
-// Só inicia o quiz se estiver na página de quiz
-if (document.getElementById("quiz-box")) {
+document.addEventListener('DOMContentLoaded', () => {
   carregarPergunta();
-}
+});
+
+ 
