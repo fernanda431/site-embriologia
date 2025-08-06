@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curiosidades - Desenvolvimento Embrionário</title>
+
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Menu hamburger (três riscos) -->
+  <nav class="menu-hamburger">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <div class="menu-content">
+      <a href="../index.html"><i class="fas fa-home"></i> Página Inicial</a>
+      <a href="../quiz/quiz.html"><i class="fas fa-brain"></i> Quiz</a>
+      <a href="curiosidades.html"><i class="fas fa-search"></i> Curiosidades</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1><span class="pink">Desenvolvimento</span> <span class="blue">Embrionário</span></h1>
+    <p class="subtitle">Da segunda à oitava semana</p>
+  </header>
+
+  <section id="curiosidades" class="curiosity-section">
+    <h2>Curiosidades Embrionárias</h2>
+    <p class="intro">Mergulhe em curiosidades incríveis sobre o desenvolvimento embrionário</p>
+
+    <div class="sketchfab-embed-wrapper">
+      <iframe 
+        title="Human Embryo 4 Week" 
+        frameborder="0" 
+        allowfullscreen 
+        mozallowfullscreen="true" 
+        webkitallowfullscreen="true" 
+        allow="autoplay; fullscreen; xr-spatial-tracking" 
+        xr-spatial-tracking 
+        execution-while-out-of-viewport 
+        execution-while-not-rendered 
+        web-share 
+        src="https://sketchfab.com/models/ab17a7cde30047c9897753a0440ef770/embed"
+        style="width: 100%; height: 480px;">
+      </iframe>
+      <p class="iframe-credit">
+        <a href="https://sketchfab.com/3d-models/human-embryo-4-week-ab17a7cde30047c9897753a0440ef770" target="_blank" rel="nofollow">Human Embryo 4 Week</a> by
+        <a href="https://sketchfab.com/aellis43" target="_blank" rel="nofollow">aellis43</a> on
+        <a href="https://sketchfab.com" target="_blank" rel="nofollow">Sketchfab</a>
+      </p>
+    </div>
+
+    <div class="audio-heart">
+      <p>Ouça o batimento cardíaco do embrião/feto aproximado:</p>
+      <audio controls>
+        <source src="https://www.fetalmed.net/wp-content/uploads/2016/09/batimento-cardiaco.mp3" type="audio/mpeg" />
+        Seu navegador não suporta áudio.
+      </audio>
+    </div>
+
+    <div class="curiosities-list">
+      <h3>Curiosidades</h3>
+      <ul>
+        <li>Entre a 2ª e 8ª semana, o embrião passa por um crescimento rápido e complexo.</li>
+        <li>A formação dos principais órgãos começa já na 3ª semana.</li>
+        <li>O tubo neural, precursor do cérebro e da medula espinhal, fecha por volta da 4ª semana.</li>
+        <li>Problemas no fechamento do tubo neural podem causar a espinha bífida.</li>
+        <li>O coração começa a bater já na 5ª semana.</li>
+        <li>Durante essas semanas, o embrião é particularmente sensível a agentes externos como álcool e medicamentos.</li>
+        <li>A formação dos membros (braços e pernas) ocorre entre a 4ª e 8ª semana.</li>
+        <li>O desenvolvimento dos olhos e ouvidos inicia-se já na 4ª semana.</li>
+        <li>Malformações congênitas mais comuns se originam nesse período crucial.</li>
+        <li>Ao final da 8ª semana, o embrião já é chamado de feto.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Acad, Enf. Sarah Freitas</strong> | Desenvolvimento Embrionário</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz - Desenvolvimento Embrionário</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="quiz-container">
+    <h2 class="quiz-title">Quiz: Desenvolvimento Embrionário</h2>
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="quiz-box">
+      <p id="question-text">Carregando pergunta...</p>
+      <div id="options"></div>
+      <p id="feedback"></p>
+      <button id="next-btn" class="btn blue-btn">Próxima pergunta</button>
+    </div>
+
+    <div id="quiz-end" class="hidden">
+      <h2 id="result-title"></h2>
+      <p id="result-msg"></p>
+      <button class="btn pink-btn" onclick="restartQuiz()">Reiniciar Quiz</button>
+      <a href="../index.html" class="btn blue-btn">Voltar à Página Inicial</a>
+    </div>
+  </main>
+
+  <audio id="correct-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_ee6657f087.mp3"></audio>
+  <audio id="wrong-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_2ffb77d1c1.mp3"></audio>
+
+  <script src="../script.js"></script>
+</body>
+</html>
